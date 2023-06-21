@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: back-lb
+spec:
+  selector:
+    app: back
+  ports:
+  - port: 8000
+    targetPort: 8000
+    protocol: TCP
+  type: LoadBalancer
